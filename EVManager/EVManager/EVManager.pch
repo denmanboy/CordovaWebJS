@@ -1,0 +1,36 @@
+//
+//  EVManager.pch
+//  EVManager
+//
+//  Created by dengyanzhou on 15/9/15.
+//  Copyright (c) 2015年 YiXingLvDong. All rights reserved.
+//
+
+#ifndef EVManager_EVManager_pch
+#define EVManager_EVManager_pch
+
+
+#import "AppDelegate.h"
+#import "UIView+Toast.h"
+#import "SVProgressHUD.h"
+#import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "SDWebImage/UIButton+WebCache.h"
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self
+
+#define CACHES_PATH  ((NSString*)[NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) firstObject])
+
+#define EVAPPDelegate  ((AppDelegate*) [UIApplication sharedApplication].delegate)
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...){}
+#endif
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
